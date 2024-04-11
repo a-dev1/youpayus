@@ -59,7 +59,8 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Use formData to make the upi://pay URL
-    const upiPayUrl = `upi://pay?pa=${formData.pa}&pn=${formData.pn}&mc=${formData.mc}&tid=${formData.tid}&tr=${formData.tr}&tn=${formData.tn}&am=${formData.am}&mam=${formData.mam}&cu=${formData.cu}&url=${formData.url}&mode=${formData.mode}&sign=${formData.sign}&orgid=${formData.orgid}&mid=${formData.mid}&msid=${formData.msid}&mtid=${formData.mtid}&query=${formData.query}`;
+    // const upiPayUrl = `upi://pay?pa=${formData.pa}&pn=${formData.pn}&mc=${formData.mc}&tid=${formData.tid}&tr=${formData.tr}&tn=${formData.tn}&am=${formData.am}&mam=${formData.mam}&cu=${formData.cu}&url=${formData.url}&mode=${formData.mode}&sign=${formData.sign}&orgid=${formData.orgid}&mid=${formData.mid}&msid=${formData.msid}&mtid=${formData.mtid}&query=${formData.query}`;
+    const upiPayUrl = `upi://pay?am=${formData.am}&amp;cu=INR&amp;mc=6300&amp;pa=${formData.pa}&amp;pn=${formData.pn}&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a`;
     console.log(upiPayUrl);
     // You can use the upiPayUrl to redirect the user to the UPI payment app
   };
