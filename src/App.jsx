@@ -3,7 +3,7 @@
 // function App() {
 //   return (
 //     <div>
-//       <a href="upi://pay?am=21.00&amp;cu=INR&amp;mc=6300&amp;pa=rzpwcbairtelpaymentsbankltd@yesbank&amp;pn=AirtelPaymentsBankltd&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a">CLICK TO PAY SUDARSHAN</a>
+      // <a href="upi://pay?am=21.00&amp;cu=INR&amp;mc=6300&amp;pa=rzpwcbairtelpaymentsbankltd@yesbank&amp;pn=AirtelPaymentsBankltd&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a">CLICK TO PAY SUDARSHAN</a>
 //       <br />
 //       <br />
 //       <br />
@@ -60,13 +60,17 @@ function App() {
     e.preventDefault();
     // Use formData to make the upi://pay URL
     // const upiPayUrl = `upi://pay?pa=${formData.pa}&pn=${formData.pn}&mc=${formData.mc}&tid=${formData.tid}&tr=${formData.tr}&tn=${formData.tn}&am=${formData.am}&mam=${formData.mam}&cu=${formData.cu}&url=${formData.url}&mode=${formData.mode}&sign=${formData.sign}&orgid=${formData.orgid}&mid=${formData.mid}&msid=${formData.msid}&mtid=${formData.mtid}&query=${formData.query}`;
-    const upiPayUrl = `upi://pay?am=${formData.am}&amp;cu=INR&amp;mc=6300&amp;pa=${formData.pa}&amp;pn=${formData.pn}&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a`;
+    // const upiPayUrl = `upi://pay?am=${formData.am}&amp;cu=INR&amp;mc=6300&amp;pa=${formData.pa}&amp;pn=${formData.pn}&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a`;
+    const upiPayUrl = `upi://pay?am=21.00&amp;cu=INR&amp;mc=6300&amp;pa=rzpwcbairtelpaymentsbankltd@yesbank&amp;pn=AirtelPaymentsBankltd&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a`;
+    window.open(upiPayUrl);
+
     console.log(upiPayUrl);
     // You can use the upiPayUrl to redirect the user to the UPI payment app
   };
 
   return (
     <div>
+      <h1>v1</h1>
       <form onSubmit={handleSubmit}>
         <label>
           Payee VPA:
@@ -85,6 +89,7 @@ function App() {
         <br />
         {/* Add more input fields for other parameters */}
         <br />
+        <a href="upi://pay?am=21.00&amp;cu=INR&amp;mc=6300&amp;pa=rzpwcbairtelpaymentsbankltd@yesbank&amp;pn=AirtelPaymentsBankltd&amp;tn=AirtelPaymentsBankltd&amp;tr=MCOe8VFU5hyC3a">CLICK TO PAY SUDARSHAN</a>
         <button type="submit">Generate UPI Link</button>
       </form>
     </div>
